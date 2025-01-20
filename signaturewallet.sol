@@ -38,4 +38,5 @@ contract multisig{
         (bool success, ) = transactions[_id].to.call{value: transactions[_id].value}("");
         require(success,"execution failed.");
     }
+    receive() external payable {}
 }
